@@ -25,7 +25,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(//template where we do our things
 
-      //appbar
+      //appbar part
       appBar: AppBar(
         backgroundColor: Colors.pink,
         //title one time use
@@ -38,7 +38,7 @@ class Home extends StatelessWidget {
         centerTitle: true,//title move to center point
       ),
 
-      //body
+      //body part
 
     );
   }
