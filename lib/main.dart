@@ -124,6 +124,24 @@ class Home extends StatelessWidget {
             ),
           ),
           SizedBox(height: 5),
+          Text(
+            "Bkash Body texts",
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.pink,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          SizedBox(height: 5),
+          Text(
+            "Bkash Body texts",
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.pink,
+              fontWeight: FontWeight.w400,
+            ),
+          ),
+          SizedBox(height: 5),
         ],
       ),
 
