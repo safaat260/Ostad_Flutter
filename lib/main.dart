@@ -38,9 +38,219 @@ class Home extends StatelessWidget {
         centerTitle: true,//title move to center point
       ),
 
-      //body part
 
-    );
-  }
+      //body part 1
+
+      // body: Column(
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //     children: [//to take multiple column we need to use children
+      //       Text("Bkash Body texts", style: TextStyle(
+      //         fontSize: 30,
+      //         color: Colors.pink,
+      //         fontWeight: FontWeight.w400,
+      //       ),),
+      //       SizedBox(height: 50),//space between two text
+      //
+      //       Text("Bkash Body texts", style: TextStyle(
+      //         fontSize: 30,
+      //         color: Colors.pink,
+      //         fontWeight: FontWeight.w400,
+      //       ),),
+      //       SizedBox(height: 50),
+      //
+      //       Text("Bkash Body texts", style: TextStyle(
+      //         fontSize: 30,
+      //         color: Colors.pink,
+      //         fontWeight: FontWeight.w400,
+      //       ),),
+      //       SizedBox(height: 50),
+      //
+      //       Text("Bkash Body texts", style: TextStyle(
+      //         fontSize: 30,
+      //         color: Colors.pink,
+      //         fontWeight: FontWeight.w400,
+      //       ),),
+      //       SizedBox(height: 50),
+      //   ],
+      // ),
+
+
+      //body part 2
+      body: SingleChildScrollView(
+      child: Column(
+        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+        children: [//to take multiple column we need to use children
+
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          //SizedBox(height: 50),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+          Text("Bkash Body texts", style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.w400,
+          ),),
+
+                      ]//childern
+
+                  )
+
+            )
+
+        );
+    }
 }
 
