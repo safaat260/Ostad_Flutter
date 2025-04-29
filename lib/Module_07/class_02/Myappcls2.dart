@@ -8,6 +8,7 @@ class Myappcls2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Module_07_class2",
       home: Homecls2(),
     );
