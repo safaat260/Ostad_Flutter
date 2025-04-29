@@ -236,6 +236,66 @@ class Homecls2 extends StatelessWidget {
                             color: Colors.red,
                             fontWeight: FontWeight.bold,
                           ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
 
                         ],
                       ),
@@ -343,6 +403,66 @@ class Homecls2 extends StatelessWidget {
                             color: Colors.red,
                             fontWeight: FontWeight.bold,
                           ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          Text("Container Text!", style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                          ),),
 
                         ],
                       ),
@@ -363,12 +483,12 @@ class Homecls2 extends StatelessWidget {
 
       //floating action button
       floatingActionButton: SizedBox(
-        height: 100,
-        width: 110,
+        height: 80,
+        width: 80,
         child: FloatingActionButton(onPressed: (){
           print("Floating Button CLicked!");
         },
-        child: Icon(Icons.add_call,size: 70,),
+        child: Icon(Icons.add_call,size: 40,),
 
 
 
