@@ -29,23 +29,26 @@ class Homecls2 extends StatelessWidget {
               children: [
             
                 //elevated button
-                ElevatedButton(
-                  //button modification
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      foregroundColor: Colors.red,
-            
-                      //shape
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      )
-            
-                    ),
-            
-                    //button action
-                    onPressed: (){
-                  print("Elevated button pressed!");
-                }, child: Text(">Elevated_Button<")),
+                Align(
+                  alignment: Alignment(0.9, 0),
+                  child: ElevatedButton(
+                    //button modification
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        foregroundColor: Colors.red,
+
+                        //shape
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        )
+
+                      ),
+
+                      //button action
+                      onPressed: (){
+                    print("Elevated button pressed!");
+                  }, child: Text(">Elevated_Button<")),
+                ),
             
                 SizedBox(height: 50,),
             
@@ -59,7 +62,7 @@ class Homecls2 extends StatelessWidget {
                   child: ElevatedButton(
                     //button modification
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.black,
+                          backgroundColor: Colors.cyan,
                           foregroundColor: Colors.red,
             
                           //shape
@@ -83,50 +86,58 @@ class Homecls2 extends StatelessWidget {
                 SizedBox(
                   height: 100,
                   width: 300,
-                  child: OutlinedButton(
-                    //outline button modification
-                    style: OutlinedButton.styleFrom(
-                      backgroundColor: Colors.yellow,
-                      foregroundColor: Colors.orange,
-            
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4),
-            
-                      )
-                    ),
-            
-                      onPressed: (){
-                    print("Outline button Pressed!");
-                  }, child: Text("Outline Button!", style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.green,
-                    backgroundColor: Colors.black,
-            
-                  ),)),
+                  child: Align(
+                    alignment: Alignment(-2.5, 0),
+                    child: OutlinedButton(
+                      //outline button modification
+                      style: OutlinedButton.styleFrom(
+                        backgroundColor: Colors.yellow,
+                        foregroundColor: Colors.orange,
+
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4),
+
+                        )
+                      ),
+
+                        onPressed: (){
+                      print("Outline button Pressed!");
+                    }, child: Text("Outline Button!", style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.green,
+                      backgroundColor: Colors.black,
+
+                    ),)),
+                  ),
                 ),
             
-                SizedBox(height: 100,),
+                SizedBox(height: 60,),
             
                 //gesture button
-                GestureDetector(
-                  onTap: (){
-                    print("One tap");
-                  },
-            
-                  onDoubleTap: (){
-                    print("Double-Tap");
-                  },
-            
-                  onLongPress: (){
-                    print("Long Tap Press!");
-                  },
-            
-                    child: Text("Gesture Detector button!", style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.deepOrange,
-                      fontWeight: FontWeight.bold,
-                    ),)),
-            
+                Align(
+                  alignment: Alignment(-0.7, 2),
+                  child: GestureDetector(
+                    onTap: (){
+                      print("One tap");
+                    },
+                              
+                    onDoubleTap: (){
+                      print("Double-Tap");
+                    },
+                              
+                    onLongPress: (){
+                      print("Long Tap Press!");
+                    },
+                              
+                      child: Text("Gesture Detector button!", style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.deepOrange,
+                        fontWeight: FontWeight.bold,
+                      ),)),
+                ),
+
+                SizedBox(height: 40,),
+
                 //text overflow handle
                 Text(
                   overflow: TextOverflow.ellipsis,//gives ....
@@ -138,8 +149,9 @@ class Homecls2 extends StatelessWidget {
                   
                   //container
                 Container(
+                  alignment: Alignment.center,
                   //margin: EdgeInsets.all(60),
-                  margin: EdgeInsets.only(top: 50),
+                  margin: EdgeInsets.only(top: 50, right: 150),
                   padding: EdgeInsets.all(15),
                   width: 200,
                   height: 200,
@@ -305,7 +317,7 @@ class Homecls2 extends StatelessWidget {
 
                 Container(
                   //margin: EdgeInsets.all(60),
-                  margin: EdgeInsets.only(top: 50, bottom: 100),
+                  margin: EdgeInsets.only(top: 50, bottom: 100, left: 130),
                   //padding: EdgeInsets.symmetric(horizontal: 15, vertical: 25),
                   padding: EdgeInsets.only(left: 20, right: 10, top: 10, bottom: 10),
                   width: 200,
