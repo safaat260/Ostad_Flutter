@@ -63,8 +63,7 @@ class _loginwithformHomeState extends State<loginwithformHome> {
         
                     //controller
                     controller: phoneController,
-        
-                    keyboardType: TextInputType.phone,
+
         
                     validator: (value){
                       if(value == null || value.isEmpty){
@@ -111,7 +110,10 @@ class _loginwithformHomeState extends State<loginwithformHome> {
         
                     //controler
                     controller: passwordController,
-        
+
+                    //hidden password
+                    obscureText: true,
+
                     keyboardType: TextInputType.phone,
         
                     validator: (value){
