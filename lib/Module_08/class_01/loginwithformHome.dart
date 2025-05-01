@@ -33,7 +33,7 @@ class _loginwithformHomeState extends State<loginwithformHome> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 150),
+              padding: const EdgeInsets.only(top: 80),
               child: Center(
                 child: Text("     Login with your \nphone and password", style: TextStyle(
                   fontSize: 30,
@@ -68,7 +68,10 @@ class _loginwithformHomeState extends State<loginwithformHome> {
         
                     validator: (value){
                       if(value == null || value.isEmpty){
-                        return "Please Enter your phone Number";
+                        return "Please Enter your phone Number!";
+                      }
+                      else if(value.length<=10){
+                        return "Please Enter 11 digit Phone Numner!";
                       }
                       else{
                         return null;
@@ -113,10 +116,10 @@ class _loginwithformHomeState extends State<loginwithformHome> {
         
                     validator: (value){
                       if(value == null || value.isEmpty){
-                        return "Please Enter your Password";
+                        return "Please Enter your Password!";
                       }
                       else if(value.length<=5){
-                        return "Enter 6 digit password";
+                        return "Enter 6 digit password!";
                       }
                       else{
                         return null;
@@ -146,7 +149,6 @@ class _loginwithformHomeState extends State<loginwithformHome> {
                 SizedBox(height: 10,),
         
                 SizedBox(
-        
                   width: 250,
                   child: ElevatedButton(
         
@@ -175,7 +177,24 @@ class _loginwithformHomeState extends State<loginwithformHome> {
         
                   }, child: Text("Submit")),
                 ),
-        
+
+                SizedBox(height: 10,),
+                SizedBox(
+                  width: 150,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      )
+                    ),
+
+                      onPressed: (){
+                    phoneController.clear();
+                    passwordController.clear();
+                  }, child: Text("Clear All")),
+                ),
         
               ],
             ))
