@@ -50,7 +50,8 @@ class _loginwithformHomeState extends State<loginwithformHome> {
                 child: Column(
               children: [
         
-        
+
+
                 //phone number
                 Padding(
                   padding: const EdgeInsets.only(right: 180),
