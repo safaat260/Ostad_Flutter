@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:test1/Module_08/Class_02/Gridviewhome.dart';
+import 'package:test1/Module_08/class_01/loginwithformHome.dart';
 
 class Listviewhome extends StatelessWidget {
   const Listviewhome({super.key});
@@ -9,11 +11,9 @@ class Listviewhome extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.red,
-        title: Text("List_View",
-        style: TextStyle(
-          fontSize: 35,
-          fontWeight: FontWeight.bold,
-        ),
+        title: Text(
+          "List_View",
+          style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
         ),
       ),
 
@@ -105,29 +105,79 @@ class Listviewhome extends StatelessWidget {
       //   ],
       //
       // ),
+      body: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10, right: 10),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurpleAccent,
+                    foregroundColor: Colors.white,
+                  ),
+                  onPressed: () {
+                    Navigator.pop(context); //works same
 
-      body: ListView.builder(
-        itemCount: 50,
-        itemBuilder: (context, index){
-          return Card(
-            //card color
-            color: Colors.cyan,
+                    Navigator.pop(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => loginwithformHome(),
+                      ),
+                    );
 
-            child: ListTile(
-              title: Text("person", style: TextStyle(
-                color: Colors.red,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),),
-              subtitle: Text("0173232313 $index"),
-              leading: Icon(Icons.phone, color: Colors.white,),
-              trailing: Icon(Icons.delete, color: Colors.pink,),
-              
+                  },
+                  child: Text("Go Back Login page"),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurpleAccent,
+                    foregroundColor: Colors.white,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Gridviewhome()),
+                    );
+                  },
+                  child: Text("Go-Gridview"),
+                ),
+              ),
+            ],
+          ),
+
+          Expanded(
+            child: ListView.builder(
+              itemCount: 50,
+              itemBuilder: (context, index) {
+                return Card(
+                  //card color
+                  color: Colors.cyan,
+
+                  child: ListTile(
+                    title: Text(
+                      "person",
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text("0173232313 $index"),
+                    leading: Icon(Icons.phone, color: Colors.white),
+                    trailing: Icon(Icons.delete, color: Colors.pink),
+                  ),
+                );
+              },
             ),
-          );
-        },
+          ),
+        ],
       ),
-
     );
   }
 }
