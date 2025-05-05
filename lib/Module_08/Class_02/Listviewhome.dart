@@ -120,21 +120,24 @@ class Listviewhome extends StatelessWidget {
           //   fontWeight: FontWeight.bold,
           // ),),
 
-          SizedBox(height: 20,),
-          //name passed
-          Text(phoneNumber, style: TextStyle(
-            fontSize: 30,
+          //SizedBox(width: 20,),
+          //phonenumber passed
+          Text("Your PhoneNumber is:\n$phoneNumber", style: TextStyle(
+            fontSize: 20,
             color: Colors.pink,
             fontWeight: FontWeight.bold,
           ),),
 
-          SizedBox(height: 10,),
-          //name passed
-          Text(password, style: TextStyle(
-            fontSize: 30,
+
+          //SizedBox(width: 10,),
+          //password passed
+          Text("Your password is:\n$password", style: TextStyle(
+            fontSize: 20,
             color: Colors.pink,
             fontWeight: FontWeight.bold,
           ),),
+
+
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
