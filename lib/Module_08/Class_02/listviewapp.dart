@@ -8,7 +8,7 @@ class listviewhome extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "listview",
-      home: Listviewhome(),
+      home: listviewhome(),
     );
   }
 }

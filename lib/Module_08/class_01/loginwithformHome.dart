@@ -5,7 +5,8 @@ import 'package:test1/Module_08/Class_02/Gridviewhome.dart';
 import 'package:test1/Module_08/Class_02/listviewapp.dart';
 
 class loginwithformHome extends StatefulWidget {
-  const loginwithformHome({super.key});
+
+  const loginwithformHome({super.key,});
 
   @override
   State<loginwithformHome> createState() => _loginwithformHomeState();
@@ -201,13 +202,26 @@ class _loginwithformHomeState extends State<loginwithformHome> {
                         }
 
                         //routing must be homepage call not app
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Listviewhome(),
-                          ),
-                        );
+                        // Navigator.pushReplacement(//net page
+                        //   context,
+                        //   MaterialPageRoute(
+                        //     builder: (context) => Listviewhome(),
+                        //   ),
+                        // );
 
+
+                        //delay for snackbar show
+                        Future.delayed(Duration (seconds: 2), (){
+                          Navigator.pushReplacement(//next page but no back option
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Listviewhome(phoneNumber: phoneController.text, password: passwordController.text,),
+                            ),
+
+                          );
+
+                            }
+                        );
                       },
                       child: Text("Submit"),
                     ),

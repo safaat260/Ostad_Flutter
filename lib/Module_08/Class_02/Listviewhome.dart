@@ -3,7 +3,11 @@ import 'package:test1/Module_08/Class_02/Gridviewhome.dart';
 import 'package:test1/Module_08/class_01/loginwithformHome.dart';
 
 class Listviewhome extends StatelessWidget {
-  const Listviewhome({super.key});
+  //data pass
+  final dynamic phoneNumber;
+  final dynamic password;
+
+  const Listviewhome({super.key, required this.phoneNumber, this.password,});
 
   @override
   Widget build(BuildContext context) {
@@ -107,6 +111,30 @@ class Listviewhome extends StatelessWidget {
       // ),
       body: Column(
         children: [
+
+          // SizedBox(height: 20,),
+          // //name passed
+          // Text(name, style: TextStyle(
+          //   fontSize: 40,
+          //   color: Colors.pink,
+          //   fontWeight: FontWeight.bold,
+          // ),),
+
+          SizedBox(height: 20,),
+          //name passed
+          Text(phoneNumber, style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.bold,
+          ),),
+
+          SizedBox(height: 10,),
+          //name passed
+          Text(password, style: TextStyle(
+            fontSize: 30,
+            color: Colors.pink,
+            fontWeight: FontWeight.bold,
+          ),),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
