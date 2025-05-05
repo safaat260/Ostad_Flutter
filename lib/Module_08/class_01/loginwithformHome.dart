@@ -199,29 +199,39 @@ class _loginwithformHomeState extends State<loginwithformHome> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(content: Text("Login Successful!")),
                           );
-                        }
-
-                        //routing must be homepage call not app
-                        // Navigator.pushReplacement(//net page
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (context) => Listviewhome(),
-                        //   ),
-                        // );
 
 
-                        //delay for snackbar show
-                        Future.delayed(Duration (seconds: 2), (){
-                          Navigator.pushReplacement(//next page but no back option
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Listviewhome(phoneNumber: phoneController.text, password: passwordController.text,),
-                            ),
+                          //routing must be homepage call not app
+                          // Navigator.pushReplacement(//net page
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (context) => Listviewhome(),
+                          //   ),
+                          // );
 
+
+                          //delay for snackbar show
+                          Future.delayed(Duration(seconds: 2), () {
+                            Navigator
+                                .pushReplacement( //next page but no back option
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    Listviewhome(
+                                      phoneNumber: phoneController.text,
+                                      password: passwordController.text,),
+                              ),
+
+                            );
+                          }
                           );
-
-                            }
-                        );
+                        }
+                        else{
+                          //show a snackbar for invalid form
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text("Try Again!!!")),
+                          );
+                        }
                       },
                       child: Text("Submit"),
                     ),
