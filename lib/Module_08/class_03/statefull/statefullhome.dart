@@ -48,7 +48,8 @@ class _counterwithstatefullwidgetState
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Titan Killed:\n$counter".toString(),
+            Text(
+              "Titan Killed:\n$counter".toString(),
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 50,
@@ -57,101 +58,152 @@ class _counterwithstatefullwidgetState
               ),
             ),
 
-            SizedBox(height: 50),
+            SizedBox(height: 10),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: 150,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.red,
+                Column(
+                  children: [
+                      Row(
+                        children: [
+                      SizedBox(
+                        width: 150,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.red,
 
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              //refreshed the page and showed in app only works in stful
+                              counter--;
+                              print("Counter now: $counter");
+                            });
+
+                            // //counter up in terminal
+                            // counter--;
+                            // print("Counter now: $counter");
+                          },
+                          child: Text(
+                            "-",
+                            style: TextStyle(fontSize: 50, color: Colors.black),
+                          ),
+                        ),
                       ),
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        //refreshed the page and showed in app only works in stful
-                        counter--;
-                        print("Counter now: $counter");
-                      });
 
-                      // //counter up in terminal
-                      // counter--;
-                      // print("Counter now: $counter");
-                    },
-                    child: Text(
-                      "-",
-                      style: TextStyle(fontSize: 50, color: Colors.black),
-                    ),
-                  ),
-                ),
+                      SizedBox(width: 20),
 
-                SizedBox(width: 20),
+                      SizedBox(
+                        width: 150,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.green,
 
-                SizedBox(
-                  width: 150,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.green,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              //refreshed the page and showed in app only works in stful
+                              counter++;
+                              print("Counter now: $counter");
+                            });
 
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50),
+                            // //counter up in terminal
+                            // counter++;
+                            // print("Counter now: $counter");
+                          },
+                          child: Text(
+                            "+",
+                            style: TextStyle(
+                              fontSize: 50,
+                              color: Colors.lightGreenAccent,
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        //refreshed the page and showed in app only works in stful
-                        counter++;
-                        print("Counter now: $counter");
-                      });
-
-                      // //counter up in terminal
-                      // counter++;
-                      // print("Counter now: $counter");
-                    },
-                    child: Text(
-                      "+",
-                      style: TextStyle(
-                        fontSize: 50,
-                        color: Colors.lightGreenAccent,
+                        ],
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: 80,
+                              width: 180,
+                              child: Image.network(
+                                "https://gifdb.com/images/high/armin-498-x-278-gif-jitkq870p7ym6g16.webp",
+                              ),
+                            ),
+                            SizedBox(
+                              height: 80,
+                              width: 150,
+                              child: Image.network(
+                                "https://images.steamusercontent.com/ugc/1047596647999422866/F476F35240D7FDC527CF237D47142A3BFCA6F970/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+                              ),
+                            ),
+                          ],
+
+                        ),
+                      ),
+                  ],
                     ),
-                  ),
-                ),
               ],
             ),
 
-            SizedBox(height: 50),
+            SizedBox(height: 5),
 
             //customwidget called in a row
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  SizedBox(width: 20,),
-                  Attackontitan(titangif: 'https://images.steamusercontent.com/ugc/823440303646988829/057D4CB42766804CD18CC5E9850FCC6B2C9B9388/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false', titanname: 'Colossal titan',),
-                  SizedBox(width: 20,),
-                   Attackontitan(titangif: 'https://giffiles.alphacoders.com/115/115281.gif', titanname: 'Beast titan',),
-                   SizedBox(width: 20,),
-                   Attackontitan(titangif: 'https://64.media.tumblr.com/5fd6d72ba457b051d1ad00fcd8a1b0f1/tumblr_n60c6ouoGZ1raxepao1_500.gifv', titanname: 'Female titan',),
-                   SizedBox(width: 20,),
-                   Attackontitan(titangif: 'https://64.media.tumblr.com/ed1f2369893ced035d996b93d07e6f9c/tumblr_n60c6ouoGZ1raxepao3_500.gifv', titanname: 'Attack titan'),
-                    SizedBox(width: 20,),
-                  Attackontitan(titangif: 'https://giffiles.alphacoders.com/219/219658.gif', titanname: 'Armored titan',),
+                  SizedBox(width: 20),
+                  Attackontitan(
+                    titangif:
+                        'https://images.steamusercontent.com/ugc/823440303646988829/057D4CB42766804CD18CC5E9850FCC6B2C9B9388/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false',
+                    titanname: 'Colossal titan',
+                    titanrate: '9.5',
+                  ),
+                  SizedBox(width: 20),
+                  Attackontitan(
+                    titangif: 'https://giffiles.alphacoders.com/115/115281.gif',
+                    titanname: 'Beast titan',
+                    titanrate: '9.2',
+                  ),
+                  SizedBox(width: 20),
+                  Attackontitan(
+                    titangif:
+                        'https://64.media.tumblr.com/5fd6d72ba457b051d1ad00fcd8a1b0f1/tumblr_n60c6ouoGZ1raxepao1_500.gifv',
+                    titanname: 'Female titan',
+                    titanrate: '9.7',
+                  ),
+                  SizedBox(width: 20),
+                  Attackontitan(
+                    titangif:
+                        'https://64.media.tumblr.com/ed1f2369893ced035d996b93d07e6f9c/tumblr_n60c6ouoGZ1raxepao3_500.gifv',
+                    titanname: 'Attack titan',
+                    titanrate: '10',
+                  ),
+                  SizedBox(width: 20),
+                  Attackontitan(
+                    titangif:
+                        'https://media1.tenor.com/m/YdWxpsrTXccAAAAd/armored-titan-attack-on-titan.gif',
+                    titanname: 'Armored titan',
+                    titanrate: '8.5',
+                  ),
                 ],
-              
               ),
-            )
-
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
