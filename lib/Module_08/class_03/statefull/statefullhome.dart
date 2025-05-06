@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test1/Module_08/class_03/custom_widget/attackontitancustomwidget.dart';
 
 class counterwithstatefullwidget extends StatefulWidget {
   const counterwithstatefullwidget({super.key});
@@ -126,62 +127,31 @@ class _counterwithstatefullwidgetState
 
             SizedBox(height: 50),
 
-            Card(
-
-              //card styles
-              color: Colors.black,
-              elevation: 10,
-              //shadowColor: Colors.redAccent,
-              shape: RoundedRectangleBorder(
-
-                //container all side box shape modify
-                borderRadius: BorderRadius.only(
-                  //bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(30),
-                  topLeft: Radius.circular(30),
-                  //topRight: Radius.circular(40),
-
-                ),
-
-                //border colors
-                side: BorderSide(
-                  color: Colors.redAccent,
-                  width: 3,
-                ),
-              ),
-
-
-              child: Container(
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      offset: Offset(10, 10),
-                      blurRadius: 30,
-                    ),
-
-                  ],
-
-                ),
-
-                width: 350,
-                child: Column(
-                  children: [
-                    Image.network(
-                      "https://images.steamusercontent.com/ugc/823440303646988829/057D4CB42766804CD18CC5E9850FCC6B2C9B9388/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
-                    ),
+            //customwidget called in a row
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  SizedBox(width: 20,),
+                  Attackontitan(titangif: 'https://images.steamusercontent.com/ugc/823440303646988829/057D4CB42766804CD18CC5E9850FCC6B2C9B9388/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false', titanname: 'Colossal titan',),
+                  SizedBox(width: 20,),
+                   Attackontitan(titangif: 'https://giffiles.alphacoders.com/115/115281.gif', titanname: 'Beast titan',),
+                   SizedBox(width: 20,),
+                   Attackontitan(titangif: 'https://64.media.tumblr.com/5fd6d72ba457b051d1ad00fcd8a1b0f1/tumblr_n60c6ouoGZ1raxepao1_500.gifv', titanname: 'Female titan',),
+                   SizedBox(width: 20,),
+                   Attackontitan(titangif: 'https://64.media.tumblr.com/ed1f2369893ced035d996b93d07e6f9c/tumblr_n60c6ouoGZ1raxepao3_500.gifv', titanname: 'Attack titan'),
+                    SizedBox(width: 20,),
+                  Attackontitan(titangif: 'https://giffiles.alphacoders.com/219/219658.gif', titanname: 'Armored titan',),
+                ],
               
-                    Text("Attack On Titan", style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.red,
-                      fontWeight: FontWeight.bold,
-                    )),
-                  ],
-                ),
               ),
-            ),
+            )
+
           ],
         ),
       ),
     );
   }
 }
+
+
