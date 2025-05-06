@@ -46,10 +46,11 @@ class Attackontitan extends StatelessWidget {
 
         width: 350,
         child: Column(
-          children: [
-            Image.network(
-              titangif,
-            ),
+              children: [
+              Image.network(
+                titangif,
+              ),
+
 
             Text(titanname, style: TextStyle(
               fontSize: 30,
@@ -57,8 +58,8 @@ class Attackontitan extends StatelessWidget {
               fontWeight: FontWeight.bold,
             )),
           ],
+        )
         ),
-      ),
-    );
+      );
   }
 }
