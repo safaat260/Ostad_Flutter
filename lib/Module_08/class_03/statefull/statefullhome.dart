@@ -130,20 +130,21 @@ class _counterwithstatefullwidgetState
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 10),
+                        padding: const EdgeInsets.only(top: 10, left: 5, right: 5),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             SizedBox(
-                              height: 80,
+                              height: 100,
                               width: 180,
                               child: Image.network(
                                 "https://gifdb.com/images/high/armin-498-x-278-gif-jitkq870p7ym6g16.webp",
                               ),
                             ),
+                            SizedBox(width: 10,),
                             SizedBox(
-                              height: 80,
-                              width: 150,
+                              height: 100,
+                              width: 180,
                               child: Image.network(
                                 "https://images.steamusercontent.com/ugc/1047596647999422866/F476F35240D7FDC527CF237D47142A3BFCA6F970/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
                               ),
@@ -156,8 +157,6 @@ class _counterwithstatefullwidgetState
                     ),
               ],
             ),
-
-            SizedBox(height: 5),
 
             //customwidget called in a row
             SingleChildScrollView(
@@ -180,14 +179,14 @@ class _counterwithstatefullwidgetState
                   SizedBox(width: 20),
                   Attackontitan(
                     titangif:
-                        'https://64.media.tumblr.com/5fd6d72ba457b051d1ad00fcd8a1b0f1/tumblr_n60c6ouoGZ1raxepao1_500.gifv',
+                        'https://media1.tenor.com/m/FHy6bFeNHp4AAAAd/aot-annie-aot.gif',
                     titanname: 'Female titan',
                     titanrate: '9.7',
                   ),
                   SizedBox(width: 20),
                   Attackontitan(
                     titangif:
-                        'https://64.media.tumblr.com/ed1f2369893ced035d996b93d07e6f9c/tumblr_n60c6ouoGZ1raxepao3_500.gifv',
+                        'https://gifdb.com/images/high/eren-yeager-enraged-titan-dmoacr4v9tcgyxg2.webp',
                     titanname: 'Attack titan',
                     titanrate: '10',
                   ),
