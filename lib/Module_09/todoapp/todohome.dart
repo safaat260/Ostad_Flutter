@@ -54,98 +54,118 @@ class _todohomeState extends State<todohome> {
 
       ),
 
-    body: Padding(
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        children: [
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            Container(
+              alignment: Alignment.centerLeft,
+              width: double.infinity,
+              height: 35,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.blue,
+              ),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 5,left: 5),
+                    child: Icon(Icons.search, size: 25, color: Colors.white,),
+                  ),
+                  Text("Search Task",
+                    style: TextStyle(color: Colors.white, fontSize: 20),),
+                ],
+              ),
+            ),
 
-          Row(
-            children: [
-              Expanded(child: TextField(
-                controller: taskcontroller,
-                decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.task),
+            Text("My Tasks", style: TextStyle(
+              fontSize: 30,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
 
-                  label: Text("Enter your Task", style: TextStyle(color: Colors.grey, fontSize: 15),),
+              //decoration: TextDecoration.underline,//underline
+              decorationColor: Colors.blue,
+              //decorationStyle: TextDecorationStyle.double,
 
-                  //text field border color and modification
-                  enabledBorder: OutlineInputBorder(// When not focused
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.blue, width: 2),
+            ),),
+
+            SizedBox(height: 10,),
+            //listviewbuilder
+            Expanded(
+              child: ListView.builder(
+
+                  itemCount: tasks.length, //itemcount via list
+
+                  itemBuilder: (context, index) {
+                    return Card(
+                      color: Colors.white,
+                      child: ListTile(
+                        title: Text(tasks[index]), //title show by task
+                        //leading
+                        leading: IconButton(onPressed: () => donetask(index),
+                            icon: Icon(Icons.done, color: Colors.blue,
+                              size: 25,)),
+
+                        //trailing
+                        trailing: IconButton(onPressed: () => deletetask(index),
+                            icon: Icon(Icons.delete, size: 25, color: Colors
+                                .red,)),
+
+                      ),
+
+                    );
+                  }),
+            ),
+
+            //
+            Row(
+              children: [
+                Expanded(child: TextField(
+                  controller: taskcontroller,
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.task),
+
+                    label: Text("Enter your Task",
+                      style: TextStyle(color: Colors.grey, fontSize: 15),),
+
+                    //text field border color and modification
+                    enabledBorder: OutlineInputBorder( // When not focused
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.blue, width: 2),
+                    ),
+
+                    focusedBorder: OutlineInputBorder( // When focused
+                      borderRadius: BorderRadius.circular(40),
+                      borderSide: BorderSide(color: Colors.green, width: 2),
+                    ),
+
+                    border: OutlineInputBorder(),
                   ),
 
-                  focusedBorder: OutlineInputBorder(// When focused
-                    borderRadius: BorderRadius.circular(40),
-                    borderSide: BorderSide(color: Colors.black, width: 2),
-                  ),
-
-                  border: OutlineInputBorder(),
+                )
                 ),
 
-              )
-              ),
 
-
-              SizedBox(width: 15,),
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+                SizedBox(width: 15,),
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                     ),
-                  ),
-                  onPressed: addtask, child: Text("Add",
-              style: TextStyle(
-                fontSize: 15,
-                color: Colors.white,
-              ),
-              ))
-            ],
-          ),
-
-
-          SizedBox(height: 10,),
-
-          Text("My Tasks", style: TextStyle(
-            fontSize: 30,
-            color: Colors.black,
-
-            //decoration: TextDecoration.underline,//underline
-            decorationColor: Colors.blue,
-            //decorationStyle: TextDecorationStyle.double,
-
-          ),),
-
-
-          SizedBox(height: 10,),
-          //listviewbuilder
-          Expanded(
-            child: ListView.builder(
-
-                itemCount: tasks.length,//itemcount via list
-
-                itemBuilder: (context, index){
-                  return Card(
+                    onPressed: addtask, child: Text("Add",
+                  style: TextStyle(
+                    fontSize: 15,
                     color: Colors.white,
-                    child: ListTile(
-                      title: Text(tasks[index]),//title show by task
-                      //leading
-                      leading: IconButton(onPressed: ()=> donetask(index) , icon: Icon(Icons.done, color: Colors.blue, size: 30,)),
+                  ),
+                ))
+              ],
+            ),
 
-                      //trailing
-                      trailing: IconButton(onPressed:()=> deletetask(index), icon: Icon(Icons.delete, size: 30, color: Colors.red,)),
-
-                    ),
-
-                  );
-                  
-                }),
-          ),
-          
-        ],
+          ],
+        ),
       ),
-    ),
-
     );
   }
 }
