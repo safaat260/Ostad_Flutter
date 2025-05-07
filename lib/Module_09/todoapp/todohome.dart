@@ -127,7 +127,7 @@ class _todohomeState extends State<todohome> {
             ),
 
             Padding(
-              padding: const EdgeInsets.only(bottom: 30),
+              padding: const EdgeInsets.only(bottom: 15),
               child: ElevatedButton(
 
                 style: ElevatedButton.styleFrom(
