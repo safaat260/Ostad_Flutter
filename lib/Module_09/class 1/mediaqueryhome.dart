@@ -12,7 +12,8 @@ class _mediaqueryhomeState extends State<mediaqueryhome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
+        title: Text("Media Query"),
+        centerTitle: true,
 
       ),
 
