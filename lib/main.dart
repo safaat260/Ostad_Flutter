@@ -24,7 +24,10 @@ import 'package:flutter/material.dart';
 
 
 //todoapp
-import 'package:test1/Module_09/todoapp/todoapp.dart';
+//import 'package:test1/Module_09/todoapp/todoapp.dart';
+
+//media query
+import 'package:test1/Module_09/class%201/mediaqueryapp.dart';
 
 
 void main(){
@@ -35,7 +38,8 @@ void main(){
   //runApp(listviewhome());
   //runApp(Gridviewapp());
     //runApp(statefullapp());
-    runApp(todoapp());
+    //runApp(todoapp());
+    runApp(mediaqueryapp());
 
 
 }
