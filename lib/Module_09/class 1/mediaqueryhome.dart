@@ -16,7 +16,6 @@ class _mediaqueryhomeState extends State<mediaqueryhome> {
           fontSize: 30,
           color: Colors.white,
           fontWeight: FontWeight.bold,
-
         ),),
         centerTitle: true,
         backgroundColor: Colors.green,

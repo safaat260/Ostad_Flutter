@@ -14,6 +14,8 @@ class _mediaqueryappState extends State<mediaqueryapp> {
     return MaterialApp(
       title: "media query",
       home: mediaqueryhome(),
+
+
     );
   }
 }
