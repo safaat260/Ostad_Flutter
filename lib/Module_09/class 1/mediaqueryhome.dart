@@ -60,15 +60,31 @@ class _mediaqueryhomeState extends State<mediaqueryhome> {
               runSpacing: 4.0,
               children:
                 List.generate(30, (index){
-                  return Chip(label: Text("item $index"));
+                  // return Chip(label: Text("item $index"));
+
+                  return Container(
+                    height: 40,
+                    width: 50,
+                    color: Colors.black,
+                  );
                 }),
             ),
+
+
+            //layoutbuiler
+            // LayoutBuilder(builder: (context, laybuilder){
+            //   if(laybuilder.maxWidth>600){
+            //     return GridView.count(crossAxisCount: 3);
+            //   }
+            //   else{
+            //     return GridView.count(crossAxisCount: 1);
+            //   }
+            // })
+
 
           ],
         ),
       ),
-
-
 
 
     );
