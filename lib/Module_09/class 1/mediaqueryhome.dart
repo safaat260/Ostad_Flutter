@@ -19,8 +19,10 @@ class _mediaqueryhomeState extends State<mediaqueryhome> {
         ),),
         centerTitle: true,
         backgroundColor: Colors.green,
-
       ),
+
+
+
 
     );
   }
