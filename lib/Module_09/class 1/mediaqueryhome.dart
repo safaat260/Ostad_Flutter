@@ -54,6 +54,7 @@ class _mediaqueryhomeState extends State<mediaqueryhome> {
             //pixelration
             Text("Pixel Ratio: $pixelratio"),
 
+
             //wrap
             Wrap(
               spacing: 8.0,
