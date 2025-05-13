@@ -10,6 +10,7 @@ class mediaqueryhome extends StatefulWidget {
 class _mediaqueryhomeState extends State<mediaqueryhome> {
   @override
   Widget build(BuildContext context) {
+    Size screensize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text("Media Query", style: TextStyle(
@@ -21,6 +22,18 @@ class _mediaqueryhomeState extends State<mediaqueryhome> {
         backgroundColor: Colors.green,
       ),
 
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Container(
+            width: screensize.width*0.5,
+            height: screensize.height*0.5,
+              color: Colors.red,
+            ),
+          )
+        ],
+      ),
 
 
 
