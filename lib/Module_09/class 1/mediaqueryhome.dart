@@ -19,20 +19,26 @@ class _mediaqueryhomeState extends State<mediaqueryhome> {
           fontWeight: FontWeight.bold,
         ),),
         centerTitle: true,
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.cyan,
       ),
 
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Container(
-            width: screensize.width*0.5,
-            height: screensize.height*0.5,
-              color: Colors.red,
-            ),
-          )
-        ],
+      body: Container(
+        width: screensize.width,
+        height: screensize.height,
+        color: Colors.green,
+
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: Container(
+              width: screensize.width*0.5,
+              height: screensize.height*0.5,
+                color: Colors.red,
+              ),
+            )
+          ],
+        ),
       ),
 
 
