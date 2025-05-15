@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+//package import
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class aspect_home extends StatefulWidget {
   const aspect_home({super.key});
 
@@ -27,6 +30,22 @@ class _aspect_homeState extends State<aspect_home> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+
+            SizedBox(height: 10,),
+            //package usage in container
+            Container(
+              height: 100.h,//from package
+              width: 300.w,//from package
+              color: Colors.green,
+            ),
+
+            //package usage in text
+            Text("Package text test", style: TextStyle(
+              fontSize: 35.sp,//from package
+              color: Colors.cyan,
+            ),),
+
+            SizedBox(height: 10,),
 
             //fractionally sized box
             FractionallySizedBox(
