@@ -33,6 +33,9 @@ import 'package:flutter/material.dart';
 //aspect ratio
 import 'package:test1/Module_09/class%202/aspect_ratio-app.dart';
 
+//device preview
+import 'package:test1/Module_09/class%203/device_preview_app.dart';
+
 void main(){
   //runApp(MyApp());//module1cls1
   //runApp(Myappcls2());
@@ -43,7 +46,8 @@ void main(){
     //runApp(statefullapp());
     //runApp(todoapp());
     //runApp(mediaqueryapp());
-      runApp(aspect_app());
+      //runApp(aspect_app());
+      runApp(device_preview_app());
 
 
 }
