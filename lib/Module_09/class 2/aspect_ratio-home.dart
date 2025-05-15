@@ -28,6 +28,50 @@ class _aspect_homeState extends State<aspect_home> {
         child: Column(
           children: [
 
+            //felxible and flex
+            Row(
+              children: [
+                Flexible(
+                  flex: 3,
+                  child: Container(
+                    height: 100,
+                    color: Colors.black,
+                  ),
+                ),
+
+                Flexible(
+                  child: Container(
+                    height: 100,
+                    color: Colors.cyan,
+                  ),
+                ),
+
+                Flexible(
+                  flex: 2,
+                  child: Container(
+                    height: 100,
+                    color: Colors.blueAccent,
+                  ),
+                ),
+
+                Flexible(
+                  child: Container(
+                    height: 100,
+                    color: Colors.pink,
+                  ),
+                ),
+
+                Flexible(
+                  flex: 3,
+                  child: Container(
+                    height: 100,
+                    color: Colors.brown,
+                  ),
+                ),
+
+              ],
+            ),
+
             Column(
               children: [
 
@@ -37,7 +81,7 @@ class _aspect_homeState extends State<aspect_home> {
                 ),
                 Container(
                   height: 100,
-                  color: Colors.red,
+                  color: Colors.blueGrey,
                 ),
 
               ],
