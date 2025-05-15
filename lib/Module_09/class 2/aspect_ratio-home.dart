@@ -27,109 +27,98 @@ class _aspect_homeState extends State<aspect_home> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-
             //felxible and flex
             Row(
               children: [
                 Flexible(
-                  flex: 3,
-                  child: Container(
-                    height: 100,
-                    color: Colors.black,
-                  ),
+                  flex: 3,//flex
+                  //fit: FlexFit.tight/loose, //fit
+                  child: Container(height: 100, color: Colors.black),
                 ),
 
-                Flexible(
-                  child: Container(
-                    height: 100,
-                    color: Colors.cyan,
-                  ),
-                ),
+                Flexible(child: Container(height: 100, color: Colors.cyan)),
 
                 Flexible(
                   flex: 2,
-                  child: Container(
-                    height: 100,
-                    color: Colors.blueAccent,
-                  ),
+                  child: Container(height: 100, color: Colors.blueAccent),
                 ),
 
-                Flexible(
-                  child: Container(
-                    height: 100,
-                    color: Colors.pink,
-                  ),
-                ),
+                Flexible(child: Container(height: 100, color: Colors.pink)),
 
                 Flexible(
                   flex: 3,
-                  child: Container(
-                    height: 100,
-                    color: Colors.brown,
-                  ),
+                  child: Container(height: 100, color: Colors.brown),
                 ),
-
               ],
             ),
 
             Column(
               children: [
-
-                Container(
-                  height: 100,
-                  color: Colors.purpleAccent,
-                ),
-                Container(
-                  height: 100,
-                  color: Colors.blueGrey,
-                ),
-
+                Container(height: 100, color: Colors.purpleAccent),
+                Container(height: 100, color: Colors.blueGrey),
               ],
             ),
 
-            SizedBox(height: 20,),
+            SizedBox(height: 20),
 
             //expanded
             Row(
               children: [
-                Expanded(child: ElevatedButton(onPressed: (){}, child: Text("Person-1"))),
-                Expanded(child: ElevatedButton(onPressed: (){}, child: Text("Person-2"))),
-                Expanded(child: ElevatedButton(onPressed: (){}, child: Text("Person-2"))),
-                
+                Expanded(
+                  flex: 2,//flex
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text("Person-1"),
+                  ),
+                ),
+
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text("Person-2"),
+                  ),
+                ),
+
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text("Person-2"),
+                  ),
+                ),
+
               ],
             ),
 
-            SizedBox(height: 20,),
+            SizedBox(height: 20),
 
             AspectRatio(
-              aspectRatio: 16 / 9,//16:9 ratio
+              aspectRatio: 16 / 9, //16:9 ratio
               child: Container(
-                  height: 200,//won't work parent is aspect ratio
-                  width: 50,//won't work parent is aspect ratio
-                  color: Colors.orange),
+                height: 200, //won't work parent is aspect ratio
+                width: 50, //won't work parent is aspect ratio
+                color: Colors.orange,
+              ),
             ),
-        
+
             AspectRatio(
-              aspectRatio: 9 / 16,//9:16 ratio
+              aspectRatio: 9 / 16, //9:16 ratio
               child: Container(color: Colors.green),
             ),
 
             AspectRatio(
-              aspectRatio: 16 / 10,//16:10 ratio
+              aspectRatio: 16 / 10, //16:10 ratio
               child: Container(color: Colors.blue),
             ),
 
             AspectRatio(
-              aspectRatio: 4 / 3,//4:3 ratio
+              aspectRatio: 4 / 3, //4:3 ratio
               child: Container(color: Colors.purpleAccent),
             ),
 
             AspectRatio(
-              aspectRatio: 1 / 1,//4:3 ratio
+              aspectRatio: 1 / 1, //4:3 ratio
               child: Container(color: Colors.pink),
             ),
-
-
           ],
         ),
       ),
