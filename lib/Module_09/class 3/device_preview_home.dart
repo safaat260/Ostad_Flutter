@@ -20,7 +20,7 @@ class _device_preview_homeState extends State<device_preview_home> {
 
       body: Column(
         children: [
-          Text("Device preview", style: TextStyle(fontSize: 30),),
+          Center(child: Text("Device preview", style: TextStyle(fontSize: 30),)),
         ],
       ),
 
