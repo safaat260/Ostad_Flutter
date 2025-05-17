@@ -11,6 +11,7 @@ class _device_preview_homeState extends State<device_preview_home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         title: Text("Device Preview", style: TextStyle(color: Colors.white, fontSize: 30),),
         backgroundColor: Colors.black,
@@ -20,8 +21,7 @@ class _device_preview_homeState extends State<device_preview_home> {
 
       body: Column(
         children: [
-
-          Center(child: Text("Device preview", style: TextStyle(fontSize: 30),)),
+          Center(child: Text("Device Preview Check")),
         ],
       ),
 
