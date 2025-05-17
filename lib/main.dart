@@ -33,7 +33,7 @@ import 'package:flutter/material.dart';
 //aspect ratio
 //import 'package:test1/Module_09/class%202/aspect_ratio-app.dart';
 
-//device preview
+//device preview + drawer
 import 'package:test1/Module_09/class%203/device_preview_app.dart';
 //pub dev
 import 'package:device_preview/device_preview.dart';
@@ -54,7 +54,7 @@ void main(){
       //device preview
       runApp(
             DevicePreview(
-                enabled: true,
+                enabled: false,
                 builder: (context)=>device_preview_app(),
             ),
       );
