@@ -55,6 +55,13 @@ class _device_preview_homeState extends State<device_preview_home> {
         //   ],
         // ),
 
+        body: TabBarView(children: [
+          Icon(Icons.home, size: 300,),
+          Icon(Icons.delete, size: 300,),
+          Icon(Icons.settings, size: 300,),
+        ],
+        ),
+
         drawer: Drawer(
           backgroundColor:
               Colors.cyan, //drawer color but icon color is inside appbar
