@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 //module_07_class_01
 //import 'package:test1/Module_07/class_01_column_row_icons_buttons/Myapp.dart';
 
@@ -19,10 +18,8 @@ import 'package:flutter/material.dart';
 //gridview
 //import 'package:test1/Module_08/Class_02/Gridviewapp.dart';
 
-
 // statefull
 // import 'package:test1/Module_08/class_03/statefull/statefullapp.dart';
-
 
 //todoapp
 //import 'package:test1/Module_09/todoapp/todoapp.dart';
@@ -38,29 +35,29 @@ import 'package:test1/Module_09/class%203/device_preview_app.dart';
 //pub dev
 import 'package:device_preview/device_preview.dart';
 
-
-void main(){
+void main() {
   //runApp(MyApp());//module1cls1
   //runApp(Myappcls2());
   //runApp(m8c1App());
   //runApp(loginwithformApp());
   //runApp(listviewhome());
   //runApp(Gridviewapp());
-    //runApp(statefullapp());
-    //runApp(todoapp());
-    //runApp(mediaqueryapp());
-      //runApp(aspect_app());
+  //runApp(statefullapp());
+  //runApp(todoapp());
+  //runApp(mediaqueryapp());
+  //runApp(aspect_app());
 
-      //device preview
-      runApp(
-            DevicePreview(
-                enabled: false,
-                builder: (context)=>device_preview_app(),
-            ),
-      );
+  //device preview
+  runApp(
+    DevicePreview(
+      enabled: false,
+      //builder: (context)=>device_preview_app(),
 
+      //or
+      builder: (context) {
+        return device_preview_app();
+      },
 
-
+    ),
+  );
 }
-
-
