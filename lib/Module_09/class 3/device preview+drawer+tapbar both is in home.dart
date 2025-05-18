@@ -1,1 +1,0 @@
-//device preview+drawer+tapbar both is in home
