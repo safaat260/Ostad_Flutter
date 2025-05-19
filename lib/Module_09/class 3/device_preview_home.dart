@@ -47,13 +47,13 @@ class _device_preview_homeState extends State<device_preview_home> {
           ),
         ),
 
-        // body: Column(
-        //   children: [
-        //     Center(child: Text("Device Preview checking 1 2 3 !")),
-        //     Image.asset("asset/device_preview.png"),
-        //     Image.asset("asset/Screenshot 2025-05-15 232719.png"),
-        //   ],
-        // ),
+        body: Column(
+          children: [
+            Center(child: Text("Device Preview checking 1 2 3 !")),
+            Image.asset("asset/device_preview.png"),
+            Image.asset("asset/Screenshot 2025-05-15 232719.png"),
+          ],
+        ),
 
         body: TabBarView(children: [
           Icon(Icons.home, size: 300,),
