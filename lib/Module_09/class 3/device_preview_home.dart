@@ -14,6 +14,7 @@ class _device_preview_homeState extends State<device_preview_home> {
       //tapbar
       length: 3,//if 4 added only 3 will work
       child: Scaffold(
+        backgroundColor: Colors.tealAccent,
         appBar: AppBar(
           title: Text(
             "Device Preview",
@@ -57,8 +58,12 @@ class _device_preview_homeState extends State<device_preview_home> {
         ),
 
         bottomNavigationBar: Material(
-          color: Colors.green,
-          child: TabBar(tabs: [
+          color: Colors.white,
+          child: TabBar(
+              labelColor: Colors.black,
+              unselectedLabelColor: Colors.grey,
+              indicatorColor: Colors.cyan,
+              tabs: [
             Tab(icon: Icon(Icons.home), text: 'Home'),
             Tab(icon: Icon(Icons.search), text: 'Search'),
             Tab(icon: Icon(Icons.person), text: 'Profile'),
