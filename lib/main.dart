@@ -31,9 +31,14 @@ import 'package:flutter/material.dart';
 //import 'package:test1/Module_09/class%202/aspect_ratio-lifecyleapp.dart';
 
 //device preview + drawer
-import 'package:test1/Module_09/class%203/device_preview_app.dart';
+//import 'package:test1/Module_09/class%203/device_preview_app.dart';
+
 //pub dev
-import 'package:device_preview/device_preview.dart';
+//import 'package:device_preview/device_preview.dart';
+
+//lifecycle
+import 'package:test1/Module_11/lifecyleapp.dart';
+
 
 void main() {
   //runApp(MyApp());//module1cls1
@@ -48,16 +53,19 @@ void main() {
   //runApp(aspect_app());
 
   //device preview
-  runApp(
-    DevicePreview(
-      enabled: false,
-      //builder: (context)=>device_preview_app(),
+  // runApp(
+  //   DevicePreview(
+  //     enabled: false,
+  //     //builder: (context)=>device_preview_app(),
+  //
+  //     //or
+  //     builder: (context) {
+  //       return device_preview_app();
+  //     },
+  //
+  //   ),
 
-      //or
-      builder: (context) {
-        return device_preview_app();
-      },
+  //lifecyle
+  runApp(lifecyleapp());
 
-    ),
-  );
 }
