@@ -12,16 +12,23 @@ class _lifecyclehomeState extends State<lifecyclehome> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+
       appBar: AppBar(
-        title: Text("Life_Cycle", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),),
+        title: Text(
+          "Life_Cycle",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 30,
+          ),
+        ),
         backgroundColor: Colors.teal,
       ),
 
       body: Column(
-        children: [
+          children: [
 
-
-        ],
+          ]
       ),
     );
   }
