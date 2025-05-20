@@ -23,31 +23,37 @@ class _device_preview_homeState extends State<device_preview_home> {
           centerTitle: true,
 
           //drawer color is here
-          iconTheme: IconThemeData(color: Colors.cyan),
-          bottom: TabBar(
-            labelColor: Colors.yellow,
-              unselectedLabelColor: Colors.white,
-              indicatorColor: Colors.red,
-              tabs: [
+          iconTheme: IconThemeData(color: Colors.red),
+          bottom: PreferredSize(preferredSize: Size.fromHeight(80), child: Container(
+            color: Colors.deepPurpleAccent,
+            child: TabBar(
+                labelColor: Colors.yellow,
+                unselectedLabelColor: Colors.white,
+                indicatorColor: Colors.red,
+                tabs: [
 
-                Tab(
-                  icon: Icon(Icons.home),
-                  text: "Home",
-                ),
-                Tab(
-                  icon: Icon(Icons.delete),
-                  text: "Delete",
-                ),
-                Tab(
-                  text: "settings",
-                  icon: Icon(Icons.settings),
-                ),
-                Tab(
-                  text: "star",
-                  icon: Icon(Icons.star),
-                ),
-              ]
+                  Tab(
+                    icon: Icon(Icons.home),
+                    text: "Home",
+                  ),
+                  Tab(
+                    icon: Icon(Icons.delete),
+                    text: "Delete",
+                  ),
+                  Tab(
+                    text: "settings",
+                    icon: Icon(Icons.settings),
+                  ),
+                  Tab(
+                    text: "star",
+                    icon: Icon(Icons.star),
+                  ),
+                ]
+            ),
           ),
+          ),
+          
+
         ),
 
         bottomNavigationBar: Material(
