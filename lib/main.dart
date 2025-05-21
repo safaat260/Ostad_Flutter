@@ -28,7 +28,7 @@ import 'package:flutter/material.dart';
 //import 'package:test1/Module_09/class%201/mediaqueryapp.dart';
 
 //aspect ratio
-//import 'package:test1/Module_09/class%202/aspect_ratio-app.dart';
+//import 'package:test1/Module_09/class%202/aspect_ratio-lifecyleapp.dart';
 
 //device preview + drawer
 import 'package:test1/Module_09/class%203/device_preview_app.dart';
