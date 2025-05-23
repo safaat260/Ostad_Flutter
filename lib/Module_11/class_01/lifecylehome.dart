@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test1/Module_11/life_cycle_test.dart';
+import 'package:test1/Module_11/class_01/life_cycle_test.dart';
 
 class lifecyclehome extends StatefulWidget {
   const lifecyclehome({super.key});
@@ -53,8 +53,8 @@ class _lifecyclehomeState extends State<lifecyclehome> {
 
           Center(
             child: ElevatedButton(onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>lifecycletest()));
-                    }, child: Text("Next page")),
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>lifecycletest()));
+            }, child: Text("Next page")),
           ),
 
         ],
