@@ -21,6 +21,12 @@ class _lifecycletestState extends State<lifecycletest> {
   }
 
   @override
+  void didChangeDependencies() {//another thing same as initState
+    print("Did change Dependencies called for test page");
+    super.didChangeDependencies();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

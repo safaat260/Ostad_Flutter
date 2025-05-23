@@ -9,19 +9,26 @@ class lifecyclehome extends StatefulWidget {
 }
 
 class _lifecyclehomeState extends State<lifecyclehome> {
-  //initState
+
+  //first runs the inside methods when the app is running
   @override
-  void initState() {
-    //first runs the inside methods when the app is running
+  void initState() {//start
     print("initstate called!");
     super.initState();
   }
 
+  //shows the method when app leave
   @override
-  void dispose() {
-    //shows the method when app leave
+  void dispose() {//end
     print("Disposed Called");
     super.dispose();
+  }
+
+  //another thing same as initState
+  @override
+  void didChangeDependencies() {//2nd  step
+    print("Did change Dependencies called for main page");
+    super.didChangeDependencies();
   }
 
   @override
