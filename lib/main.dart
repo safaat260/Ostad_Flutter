@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test1/Module_11/class_01/lifecyleapp.dart';
+
 
 //module_07_class_01
 //import 'package:test1/Module_07/class_01_column_row_icons_buttons/Myapp.dart';
@@ -38,7 +38,10 @@ import 'package:test1/Module_11/class_01/lifecyleapp.dart';
 //import 'package:device_preview/device_preview.dart';
 
 //lifecycle
+//import 'package:test1/Module_11/class_01/lifecyleapp.dart';
 
+//alertdialog
+import 'package:test1/Module_11/class_01/alertdialog_app.dart';
 
 
 void main() {
@@ -66,7 +69,10 @@ void main() {
   //
   //   ),
 
-  //lifecyle
-  runApp(lifecyleapp());
+  //lifecycle
+  //runApp(lifecyleapp());
+
+
+  runApp(AlertdialogApp());
 
 }
