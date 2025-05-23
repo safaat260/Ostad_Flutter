@@ -65,7 +65,7 @@ void main() {
   //
   //   ),
 
-  //lifecyle
+  //lifecycle
   runApp(lifecyleapp());
 
 }
