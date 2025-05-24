@@ -8,6 +8,17 @@ class AlertdialogAppHome extends StatefulWidget {
 }
 
 class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
+  void alert() {
+    showDialog(
+      context: context,
+      builder:
+          (context) => AlertDialog(
+            title: Text("This is title"),
+            content: Text("Are you Sure?"),
+          ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,13 +35,19 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
         backgroundColor: Colors.teal,
       ),
 
-
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                alert();
+              },
+              child: Text("click"),
+            ),
+          ),
         ],
       ),
-
     );
   }
 }
