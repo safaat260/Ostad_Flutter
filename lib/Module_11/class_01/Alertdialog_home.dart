@@ -8,6 +8,7 @@ class AlertdialogAppHome extends StatefulWidget {
 }
 
 class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
+  //alertdialog
   void alert() {
     showDialog(
       context: context,
@@ -17,12 +18,41 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
             content: Text("Are you Sure?"),
             actions: [
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 child: Text("No", style: TextStyle(color: Colors.red)),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 child: Text("Yes", style: TextStyle(color: Colors.green)),
+              ),
+            ],
+          ),
+    );
+  }
+
+  //simple dialog
+  void simpledialog() {
+    showDialog(
+      context: context,
+      builder:
+          (context) => SimpleDialog(
+            title: Text("Simple Dialog"),
+            children: [
+              SimpleDialogOption(
+                child: Text("Option - 1"),
+                onPressed: () => Navigator.pop(context),
+              ),
+              SimpleDialogOption(
+                child: Text("Option - 2"),
+                onPressed: () => Navigator.pop(context),
+              ),
+              SimpleDialogOption(
+                child: Text("Option - 3"),
+                onPressed: () => Navigator.pop(context),
               ),
             ],
           ),
@@ -48,12 +78,22 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          //alertdialog
           Center(
             child: ElevatedButton(
               onPressed: () {
                 alert();
               },
-              child: Text("click"),
+              child: Text("Alert-Dialog"),
+            ),
+          ),
+          //simpledialog
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+               simpledialog();
+              },
+              child: Text("Simple-Dialog"),
             ),
           ),
         ],
