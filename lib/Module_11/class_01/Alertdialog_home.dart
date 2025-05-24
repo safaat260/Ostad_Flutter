@@ -8,7 +8,6 @@ class AlertdialogAppHome extends StatefulWidget {
 }
 
 class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
-
   void alert() {
     showDialog(
       context: context,
@@ -16,6 +15,16 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
           (context) => AlertDialog(
             title: Text("This is title"),
             content: Text("Are you Sure?"),
+            actions: [
+              TextButton(
+                onPressed: () {},
+                child: Text("No", style: TextStyle(color: Colors.red)),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text("Yes", style: TextStyle(color: Colors.green)),
+              ),
+            ],
           ),
     );
   }
