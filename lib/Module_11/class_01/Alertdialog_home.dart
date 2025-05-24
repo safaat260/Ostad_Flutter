@@ -8,6 +8,7 @@ class AlertdialogAppHome extends StatefulWidget {
 }
 
 class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
+
   void alert() {
     showDialog(
       context: context,
