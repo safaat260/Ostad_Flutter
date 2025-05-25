@@ -9,6 +9,7 @@ class AlertdialogAppHome extends StatefulWidget {
 
 class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
   //alertdialog
+  int age = 0;
   void alert() {
     showDialog(
       context: context,
@@ -19,12 +20,20 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
             actions: [
               TextButton(
                 onPressed: () {
+                  setState(() {
+                    age=age+2;
+                  });
+                  print(age);
                   Navigator.pop(context);
                 },
                 child: Text("No", style: TextStyle(color: Colors.red)),
               ),
               TextButton(
                 onPressed: () {
+                  setState(() {
+                    age=age+5;
+                  });
+                  print(age);
                   Navigator.pop(context);
                 },
                 child: Text("Yes", style: TextStyle(color: Colors.green)),
