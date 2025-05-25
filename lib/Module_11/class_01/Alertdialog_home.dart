@@ -34,6 +34,35 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
     );
   }
 
+  //alertdialog-with-icon
+  void alertwithiconV1() {
+    showDialog(
+      context: context,
+      builder:
+          (context) => AlertDialog(
+
+            //shape of alert
+               shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            title: Row(
+              children: [
+                Icon(Icons.warning, color: Colors.red),
+                Text("Warning!"),
+              ],
+            ),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("Dismiss"),
+              ),
+            ],
+          ),
+    );
+  }
+
   //simple dialog
   void simpledialog() {
     showDialog(
@@ -67,8 +96,11 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
           (context) => Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              SizedBox(height: 20,),
-              Text("Chose Option", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+              SizedBox(height: 20),
+              Text(
+                "Chose Option",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
               ListTile(
                 title: Text("Option-1"),
                 onTap: () => Navigator.pop(context),
@@ -105,7 +137,6 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-
           //alertdialog
           Center(
             child: ElevatedButton(
@@ -116,6 +147,20 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
             ),
           ),
 
+          SizedBox(height: 20),
+
+          //alertdialog-with-icon
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                alertwithiconV1();
+              },
+              child: Text("Alert-Dialog-with-Icon"),
+            ),
+          ),
+
+          SizedBox(height: 20),
+
           //simpledialog
           Center(
             child: ElevatedButton(
@@ -125,6 +170,8 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
               child: Text("Simple-Dialog"),
             ),
           ),
+
+          SizedBox(height: 20),
 
           //bottomsheetalertdialog
           Center(
