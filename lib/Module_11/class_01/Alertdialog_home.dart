@@ -59,6 +59,33 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
     );
   }
 
+  //bottomsheetalertdialog
+  void bottomsheetalertdialog() {
+    showModalBottomSheet(
+      context: context,
+      builder:
+          (context) => Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SizedBox(height: 20,),
+              Text("Chose Option", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+              ListTile(
+                title: Text("Option-1"),
+                onTap: () => Navigator.pop(context),
+              ),
+              ListTile(
+                title: Text("Option-2"),
+                onTap: () => Navigator.pop(context),
+              ),
+              ListTile(
+                title: Text("Option-3"),
+                onTap: () => Navigator.pop(context),
+              ),
+            ],
+          ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,6 +105,7 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+
           //alertdialog
           Center(
             child: ElevatedButton(
@@ -87,13 +115,24 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
               child: Text("Alert-Dialog"),
             ),
           ),
+
           //simpledialog
           Center(
             child: ElevatedButton(
               onPressed: () {
-               simpledialog();
+                simpledialog();
               },
               child: Text("Simple-Dialog"),
+            ),
+          ),
+
+          //bottomsheetalertdialog
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                bottomsheetalertdialog();
+              },
+              child: Text("Bottom-Sheet-Alertdialog"),
             ),
           ),
         ],
