@@ -34,7 +34,7 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
     );
   }
 
-  //alertdialog-with-icon
+  //alertdialog-with-icon v1
   void alertwithiconV1() {
     showDialog(
       context: context,
@@ -48,18 +48,57 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
             title: Row(
               children: [
                 Icon(Icons.warning, color: Colors.red),
-                Text("Warning!"),
+                SizedBox(width: 10,),
+                Text("Warning!", style: TextStyle(fontWeight: FontWeight.bold),),
               ],
             ),
+            content: Text("Something Went Wrong!"),
             actions: [
               TextButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text("Dismiss"),
+                child: Text("Dismiss", style: TextStyle(color: Colors.green),),
               ),
             ],
           ),
+    );
+  }
+
+  //alertdialog-with-icon v2
+  void alertwithiconV2() {
+    showDialog(
+      context: context,
+      builder:
+          (context) => AlertDialog(
+
+        //shape of alert
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        title: Text("Main Text", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              children: [
+                Icon(Icons.warning, color: Colors.red, size: 30,),
+                SizedBox(width: 5),
+                Text("Sub Text", style: TextStyle(fontSize: 20),),
+              ],
+            ),
+            Text("Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec", style: TextStyle(color: Colors.grey),),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Text("OK!", style: TextStyle(color: Colors.green),),
+          ),
+        ],
+      ),
     );
   }
 
@@ -149,13 +188,25 @@ class _AlertdialogAppHomeState extends State<AlertdialogAppHome> {
 
           SizedBox(height: 20),
 
-          //alertdialog-with-icon
+          //alertdialog-with-icon v1
           Center(
             child: ElevatedButton(
               onPressed: () {
                 alertwithiconV1();
               },
-              child: Text("Alert-Dialog-with-Icon"),
+              child: Text("Alert-Dialog-with-Icon V1"),
+            ),
+          ),
+
+          SizedBox(height: 20),
+
+          //alertdialog-with-icon v2
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                alertwithiconV2();
+              },
+              child: Text("Alert-Dialog-with-Icon v2"),
             ),
           ),
 
