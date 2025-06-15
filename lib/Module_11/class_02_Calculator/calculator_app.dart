@@ -14,6 +14,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
     return MaterialApp(
       title: "Calculator APP",
       home: CalculatorHome(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

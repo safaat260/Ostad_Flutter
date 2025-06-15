@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 //module_07_class_01
 //import 'package:test1/Module_07/class_01_column_row_icons_buttons/Myapp.dart';
 
@@ -41,8 +40,10 @@ import 'package:flutter/material.dart';
 //import 'package:test1/Module_11/class_01/lifecyleapp.dart';
 
 //alertdialog
-import 'package:test1/Module_11/class_01/alertdialog_app.dart';
+//import 'package:test1/Module_11/class_01/alertdialog_app.dart';
 
+//calculator
+import 'package:test1/Module_11/class_02_Calculator/calculator_app.dart';
 
 void main() {
   //runApp(MyApp());//module1cls1
@@ -72,7 +73,10 @@ void main() {
   //lifecycle
   //runApp(lifecyleapp());
 
+  //alertdialog
+  //runApp(AlertdialogApp());
 
-  runApp(AlertdialogApp());
+  //calculator
+  runApp(CalculatorApp());
 
 }
