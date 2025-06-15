@@ -93,7 +93,7 @@ class _CalculatorHomeState extends State<CalculatorHome> {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,
-            fontSize: 28,
+            fontSize: 25,
           ),
         ),
         backgroundColor: Colors.orange,
@@ -101,7 +101,7 @@ class _CalculatorHomeState extends State<CalculatorHome> {
 
       body: Column(
         children: [
-          Text("Calculator App By Fahim Safaat", style: TextStyle(color: Colors.grey),),
+          Text("Developed By Fahim Safaat", style: TextStyle(color: Colors.grey, fontSize: 20),),
           Expanded(
             child: Container(
               alignment: Alignment.bottomRight,
@@ -133,10 +133,9 @@ class _CalculatorHomeState extends State<CalculatorHome> {
 
           Row(
             children: [
-              calculator_widget(onClick: () {}, text: '', color: Colors.transparent), // empty slot
-              calculator_widget(onClick: () {}, text: '', color: Colors.transparent), // empty slot
-              calculator_widget(onClick:()=> buttonpress('.'), text: '.', color: Colors.orange),
+              calculator_widget(onClick:()=> buttonpress('C'), text: 'C',color: Colors.red,),
               calculator_widget(onClick: () => buttonpress('⌫'), text: '⌫', color: Colors.orange),
+              calculator_widget(onClick:()=> buttonpress('+'), text: '+',color: Colors.orange,),
             ],
           ),
 
@@ -145,7 +144,7 @@ class _CalculatorHomeState extends State<CalculatorHome> {
               calculator_widget(onClick:()=> buttonpress('7'), text: '7',),
               calculator_widget(onClick:()=> buttonpress('8'), text: '8',),
               calculator_widget(onClick:()=> buttonpress('9'), text: '9',),
-              calculator_widget(onClick:()=> buttonpress('÷'), text: '÷', color: Colors.orange,),
+              calculator_widget(onClick:()=> buttonpress('-'), text: '-', color: Colors.orange,),
             ],
           ),
           Row(
@@ -162,16 +161,16 @@ class _CalculatorHomeState extends State<CalculatorHome> {
               calculator_widget(onClick:()=> buttonpress('1'), text: '1',),
               calculator_widget(onClick:()=> buttonpress('2'), text: '2',),
               calculator_widget(onClick:()=> buttonpress('3'), text: '3',),
-              calculator_widget(onClick:()=> buttonpress("-"), text: '-',color: Colors.orange,),
+              calculator_widget(onClick:()=> buttonpress("÷"), text: '÷',color: Colors.orange,),
 
             ],
           ),
           Row(
             children: [
-              calculator_widget(onClick:()=> buttonpress('C'), text: 'C',color: Colors.red,),
+              calculator_widget(onClick:()=> buttonpress('.'), text: '.', color: Colors.grey[800]),
               calculator_widget(onClick:()=> buttonpress('0'), text: '0',),
               calculator_widget(onClick:()=> buttonpress('='), text: '=',color: Colors.green,),
-              calculator_widget(onClick:()=> buttonpress('+'), text: '+',color: Colors.orange,),
+
 
             ],
           ),
