@@ -28,6 +28,17 @@ class _CalculatorHomeState extends State<CalculatorHome> {
         num2 = 0;
       }
 
+
+      else if (value == '⌫') {
+        if (_input.isNotEmpty && _input != '0') {
+          _input = _input.substring(0, _input.length - 1);
+          if (_input == "") {
+            _input = "0";
+          }
+          _output = _input;
+        }
+      }
+
       else if(value == '='){
          num2 = double.parse(_input);
          if(_operator == '+'){
@@ -50,15 +61,22 @@ class _CalculatorHomeState extends State<CalculatorHome> {
       _operator = value;
       _input = '';
       }
-      else{
-        if(_input == "0"){
-          _input = value;
+
+      else {
+        // Handle decimal input
+        if (value == '.' && _input.contains('.')) {
+          return; // Prevent multiple decimals
         }
-        else{
+
+        if (_input == "0" && value != ".") {
+          _input = value;
+        } else {
           _input += value;
         }
+
         _output = _input;
-        }
+      }
+
 
     });
   }
@@ -88,15 +106,38 @@ class _CalculatorHomeState extends State<CalculatorHome> {
             child: Container(
               alignment: Alignment.bottomRight,
               padding: EdgeInsets.all(20),
-              child: Text(
-                _output,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+              //show the inputs
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(_operator.isNotEmpty ? "$num1 $_operator $_input" : _input,
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    fontSize: 24,
+                  ),
+                  ),
+                  SizedBox(height: 10,),
+                  Text(
+                    _output,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
+          ),
+
+          Row(
+            children: [
+              calculator_widget(onClick: () {}, text: '', color: Colors.transparent), // empty slot
+              calculator_widget(onClick: () {}, text: '', color: Colors.transparent), // empty slot
+              calculator_widget(onClick:()=> buttonpress('.'), text: '.', color: Colors.orange),
+              calculator_widget(onClick: () => buttonpress('⌫'), text: '⌫', color: Colors.orange),
+            ],
           ),
 
           Row(

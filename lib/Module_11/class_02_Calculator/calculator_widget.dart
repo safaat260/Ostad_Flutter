@@ -10,7 +10,6 @@ class calculator_widget extends StatelessWidget {
     required this.onClick,
     this.color,
     required this.text,
-
   });
 
   @override
