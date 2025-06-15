@@ -23,7 +23,7 @@ class calculator_widget extends StatelessWidget {
             backgroundColor: color ?? Colors.grey[800],
             padding: EdgeInsets.all(15),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
             ),
           ),
           onPressed: onClick,
