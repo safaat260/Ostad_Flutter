@@ -12,7 +12,7 @@ class _CalculatorHomeState extends State<CalculatorHome> {
   //parameter
   String _input = "0";
   String _output = "0";
-  String _operator = "0";
+  String _operator = "";
   double num1 = 0;
   double num2 = 0;
 
